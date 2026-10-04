@@ -10,14 +10,14 @@ Use this file to cite past questions, find exemplars by unit, and locate pages i
 
 | Paper | File | Pages |
 |---|---|---|
-| 考試說明 (111起) | `assets/papers/math-a/exam-guide-111.pdf` | 測驗目標 p5; 試卷架構 p6; 試題舉例 p7–14; 測驗範圍附件 p15–23 |
-| 參考試卷 (111起) | `assets/papers/math-a/reference-paper-111.pdf` | 說明 p1–2; 試題 p6–11; 參考公式 p12; 試題解析（含學科內容/測驗目標） p13–21 |
-| 110年試辦 | `assets/papers/math-a/pilot-110.pdf` | 試題 p2–7; 參考公式 p8; 非選評分原則 p9–11; 試題解析 p12–19 |
-| 111學測 | `assets/papers/math-a/gsat-111.pdf` | 試題 p2–7; 參考公式 p8; 答案 p9; 非選評分原則 p10–12 |
-| 112學測 | `assets/papers/math-a/gsat-112.pdf` | 試題 p2–7; 參考公式 p8; 答案 p9; 非選評分原則 p10–12 |
-| 113學測 | `assets/papers/math-a/gsat-113.pdf` | 試題 p2–7; 參考公式 p8; 答案 p9; 非選評分原則 p10–11 |
-| 114學測 | `assets/papers/math-a/gsat-114.pdf` | 試題 p2–7; 參考公式 p8; 答案 p9; 非選評分原則 p10–12 |
-| 115學測 | `assets/papers/math-a/gsat-115.pdf` | 試題 p2–7; 參考公式 p8; 答案 p9; 非選評分原則 p10–12 |
+| 考試說明 (111起) | `assets/papers/exam-guide-111.pdf` | 測驗目標 p5; 試卷架構 p6; 試題舉例 p7–14; 測驗範圍附件 p15–23 |
+| 參考試卷 (111起) | `assets/papers/reference-paper-111.pdf` | 說明 p1–2; 試題 p6–11; 參考公式 p12; 試題解析（含學科內容/測驗目標） p13–21 |
+| 110年試辦 | `assets/papers/pilot-110.pdf` | 試題 p2–7; 參考公式 p8; 非選評分原則 p9–11; 試題解析 p12–19 |
+| 111學測 | `assets/papers/gsat-111.pdf` | 試題 p2–7; 參考公式 p8; 答案 p9; 非選評分原則 p10–12 |
+| 112學測 | `assets/papers/gsat-112.pdf` | 試題 p2–7; 參考公式 p8; 答案 p9; 非選評分原則 p10–12 |
+| 113學測 | `assets/papers/gsat-113.pdf` | 試題 p2–7; 參考公式 p8; 答案 p9; 非選評分原則 p10–11 |
+| 114學測 | `assets/papers/gsat-114.pdf` | 試題 p2–7; 參考公式 p8; 答案 p9; 非選評分原則 p10–12 |
+| 115學測 | `assets/papers/gsat-115.pdf` | 試題 p2–7; 參考公式 p8; 答案 p9; 非選評分原則 p10–12 |
 
 In the 111–115 papers, questions 1–4 are usually on p2, 5–6 (+7–8) on p3, the 多選 on p3–5, the 選填 on p5–6, and the 混合題 18–20 on p7. Open p7 for any 混合題 and p10+ for its rubric.
 

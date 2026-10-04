@@ -1,11 +1,22 @@
 {
   "name": "gsat-tutor",
   "displayName": "GSAT-Tutor 學測家教",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "學測（GSAT）家教：依大考中心考試說明與 111–115 學測趨勢，提供數A、自然的觀念講解、模擬出題、非選批改與弱點診斷。Tutors Taiwan's GSAT (數A, 自然) anchored to the official CEEC exam guidelines.",
-  "author": { "name": "Samson Ho", "url": "https://github.com/Samson-Ho" },
+  "author": {
+    "name": "Samson Ho",
+    "url": "https://github.com/Samson-Ho"
+  },
   "homepage": "https://github.com/Samson-Ho/GSAT-Tutor",
   "repository": "https://github.com/Samson-Ho/GSAT-Tutor",
   "license": "GPL-3.0",
-  "keywords": ["學測", "GSAT", "Taiwan", "education", "數A", "自然", "exam-prep"]
+  "keywords": [
+    "學測",
+    "GSAT",
+    "Taiwan",
+    "education",
+    "數A",
+    "自然",
+    "exam-prep"
+  ]
 }

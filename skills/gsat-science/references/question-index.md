@@ -11,15 +11,15 @@ Use this file to cite past questions, find exemplars by unit, and locate pages i
 
 | Paper | File | Pages |
 |---|---|---|
-| 考試說明 (111起) | `assets/papers/science/exam-guide-111.pdf` | 測驗目標 p5–7; 範圍與配分 p8; 試題舉例 物 p9–13, 化 p14–19, 生 p20–23, 地 p24–27; 第貳部分示例 p28–39; 學習表現 p43–45; 學習內容 p46–55; 探究與實作 p56–59 |
-| 參考試卷 (111起) | `assets/papers/science/reference-paper-111.pdf` | 說明 p1; 第壹部分 p5–15; 第貳部分 p15–21; 試題解析（含測驗內容／目標／評分） p22–51 |
-| 109年試辦 | `assets/papers/science/pilot-109.pdf` | 第壹部分 p2–12; 第貳部分 p13–20; 非選評分原則 p21–25; 試題解析 p26–54 |
-| 110年試辦 | `assets/papers/science/pilot-110.pdf` | 第壹部分 p2–11; 第貳部分 p12–19; 非選評分原則 p20–25; 試題解析 p26–65 |
-| 111學測 | `assets/papers/science/gsat-111.pdf` | 第壹部分 p2–13; 第貳部分 p13–20; 答案 p21; 非選評分原則 p22–26 |
-| 112學測 | `assets/papers/science/gsat-112.pdf` | 第壹部分 p2–12; 第貳部分 p12–20; 答案 p21; 非選評分原則 p22–26 |
-| 113學測 | `assets/papers/science/gsat-113.pdf` | 第壹部分 p2–11; 第貳部分 p12–19; 答案 p20; 非選評分原則 p21–27 |
-| 114學測 | `assets/papers/science/gsat-114.pdf` | 第壹部分 p2–11; 第貳部分 p12–20; 答案 p21; 非選評分原則 p22–29 |
-| 115學測 | `assets/papers/science/gsat-115.pdf` | 第壹部分 p2–12; 第貳部分 p12–20; 答案 p21; 非選評分原則 p22–29 |
+| 考試說明 (111起) | `assets/papers/exam-guide-111.pdf` | 測驗目標 p5–7; 範圍與配分 p8; 試題舉例 物 p9–13, 化 p14–19, 生 p20–23, 地 p24–27; 第貳部分示例 p28–39; 學習表現 p43–45; 學習內容 p46–55; 探究與實作 p56–59 |
+| 參考試卷 (111起) | `assets/papers/reference-paper-111.pdf` | 說明 p1; 第壹部分 p5–15; 第貳部分 p15–21; 試題解析（含測驗內容／目標／評分） p22–51 |
+| 109年試辦 | `assets/papers/pilot-109.pdf` | 第壹部分 p2–12; 第貳部分 p13–20; 非選評分原則 p21–25; 試題解析 p26–54 |
+| 110年試辦 | `assets/papers/pilot-110.pdf` | 第壹部分 p2–11; 第貳部分 p12–19; 非選評分原則 p20–25; 試題解析 p26–65 |
+| 111學測 | `assets/papers/gsat-111.pdf` | 第壹部分 p2–13; 第貳部分 p13–20; 答案 p21; 非選評分原則 p22–26 |
+| 112學測 | `assets/papers/gsat-112.pdf` | 第壹部分 p2–12; 第貳部分 p12–20; 答案 p21; 非選評分原則 p22–26 |
+| 113學測 | `assets/papers/gsat-113.pdf` | 第壹部分 p2–11; 第貳部分 p12–19; 答案 p20; 非選評分原則 p21–27 |
+| 114學測 | `assets/papers/gsat-114.pdf` | 第壹部分 p2–11; 第貳部分 p12–20; 答案 p21; 非選評分原則 p22–29 |
+| 115學測 | `assets/papers/gsat-115.pdf` | 第壹部分 p2–12; 第貳部分 p12–20; 答案 p21; 非選評分原則 p22–29 |
 
 Many items depend on figures (graphs, diagrams, maps). Look at the page image before explaining or grading such an item.
 

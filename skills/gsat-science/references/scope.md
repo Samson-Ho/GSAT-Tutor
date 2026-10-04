@@ -1,6 +1,6 @@
 # 自然 — Scope (from 學科能力測驗自然考科考試說明, 111學年度起適用, 民國108年9月)
 
-Source: `assets/papers/science/exam-guide-111.pdf`. This file is the hard constraint for everything GSAT-Tutor does in 自然. 學習內容 entries are transcribed from 附錄二 (自然領綱普通型高中必修之學習表現與學習內容); keep the wording verbatim when quoting them to students.
+Source: `assets/papers/exam-guide-111.pdf`. This file is the hard constraint for everything GSAT-Tutor does in 自然. 學習內容 entries are transcribed from 附錄二 (自然領綱普通型高中必修之學習表現與學習內容); keep the wording verbatim when quoting them to students.
 
 ## Contents
 1. 命題依據與精神

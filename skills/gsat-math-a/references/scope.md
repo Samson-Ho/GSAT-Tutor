@@ -1,6 +1,6 @@
 # 數A — Scope (from 學科能力測驗數學考科考試說明, 111學年度起適用, 民國108年9月)
 
-Source: `assets/papers/math-a/exam-guide-111.pdf`. This file is the hard constraint for everything GSAT-Tutor does in 數A. The 學習內容 entries below are transcribed from 附件一 (數學A考科測驗範圍); keep the wording verbatim when quoting them to students.
+Source: `assets/papers/exam-guide-111.pdf`. This file is the hard constraint for everything GSAT-Tutor does in 數A. The 學習內容 entries below are transcribed from 附件一 (數學A考科測驗範圍); keep the wording verbatim when quoting them to students.
 
 ## Contents
 1. 命題依據與精神
