@@ -1,0 +1,12 @@
+{
+  "name": "gsat-tutor-marketplace",
+  "description": "GSAT-Tutor：學科能力測驗家教插件",
+  "owner": { "name": "Samson Ho", "url": "https://github.com/Samson-Ho" },
+  "plugins": [
+    {
+      "name": "gsat-tutor",
+      "source": "./",
+      "description": "學測（GSAT）數A、自然家教：觀念講解、模擬出題、非選批改與弱點診斷"
+    }
+  ]
+}
