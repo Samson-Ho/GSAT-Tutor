@@ -1,0 +1,73 @@
+{
+  "skill_name": "gsat-tutor",
+  "evals": [
+    {
+      "id": 1,
+      "name": "matha-concept-scope",
+      "prompt": "我高二，準備數A學測。想問：學測數A會考「兩圓的位置關係」嗎？sec、csc 要背嗎？另外三次函數的「對稱中心」跟「在 x=h 附近近似一條直線」我一直搞不懂，學測都怎麼考？講完給我一題練習題。",
+      "expected_output": "States 兩圓關係 is excluded (G-10-4 備註) and cot/sec/csc are ※ (not tested); explains F-10-2 via f(x)=a(x-h)^3+p(x-h)+k with symmetry centre (h,k) and local line y=p(x-h)+k; cites real past items (e.g. 111數A第10題, 113-3, 114-13, 115-12, 參考試卷第9題); gives one 學測-style practice item with answer and 詳解 separated; replies in 繁體中文.",
+      "files": [],
+      "assertions": [
+        "States clearly that 兩圓的位置關係 is NOT in 數A 學測 scope",
+        "States that sec/csc (and cot) are not tested / outside the exam scope",
+        "Explains the symmetry centre using the form a(x−h)^3 + p(x−h) + k (or equivalent) with centre (h, k)",
+        "Explains the local linear approximation y = p(x−h) + k near x = h",
+        "Cites at least two specific real past 數A questions (year + number) that actually test F-10-2 (valid: 111-10, 113-3, 114-13, 115-12, 參考試卷9, 110試辦8, 考試說明例1)",
+        "Includes exactly one practice question with the answer/解析 placed after and separated from the question",
+        "The practice question's stated answer is mathematically correct",
+        "The whole reply is in 繁體中文"
+      ]
+    },
+    {
+      "id": 2,
+      "name": "science-mock-crossdiscipline-set",
+      "prompt": "幫我出一組學測自然第貳部分的跨科題組（物理＋地科），主題跟潮汐或颱風有關都可以，大概4題，要有選擇題也要有非選擇題，附答案、詳解跟評分原則。",
+      "expected_output": "A 題組 with header like 「37-40題為題組」, a passage with data/table, 4 items mixing 選擇 (with （應選n項） for 多選 and （2分）) and at least one 非選 (4分) with an itemized 評分原則 in official style; 學習內容 codes from both 物理 and 地科 plus 測驗目標; answers correct; labelled as 模擬題.",
+      "files": [],
+      "assertions": [
+        "Has a 題組 header in official style (e.g. 「37-40題為題組」)",
+        "Contains 3–5 items in the set",
+        "At least one 多選題 states 「應選 n 項」 and its answer key contains exactly n options",
+        "Includes at least one 非選擇題 with a stated point value",
+        "The 非選 has an itemized 評分原則 whose points sum to the item's total",
+        "Lists 學習內容 codes from both 物理 (P…) and 地球科學 (E…)",
+        "Tags 測驗目標 (e.g. 2c, 3b) for the items",
+        "All answer keys are scientifically and numerically correct",
+        "Labels the items as 模擬題 (not presented as official)"
+      ]
+    },
+    {
+      "id": 3,
+      "name": "matha-grade-113-20",
+      "prompt": "幫我照學測評分原則改這題，滿分8分我會拿幾分？哪裡被扣？\n\n題目（113學測數A第20題）：坐標空間中，O為原點，E為平面 x − z = 4。已知空間中一點 P(a, b, c) 滿足向量 OP 與向量 (1,0,0) 的夾角 θ ≤ π/6（第19題已證明此時 a² ≥ 3(b² + c²)）。承19題，已知點 P 在平面 E 上且 b = 0。試求 c 的最大可能範圍，並求線段 OP 的最小可能長度。（非選擇題，8分）\n\n我的作答：\n因為 P 在 E 上，所以 a − c = 4，a = c + 4。\nb = 0 代入 a² ≥ 3(b² + c²)：(c + 4)² ≥ 3c²\nc² + 8c + 16 ≥ 3c²\n2c² − 8c − 16 ≤ 0\nc² − 4c − 8 ≤ 0，所以 2 − 2√3 ≤ c ≤ 2 + 2√3。\nOP² = a² + c² = (c + 4)² + c² = 2c² + 8c + 16 = 2(c + 2)² + 8\n所以當 c = −2 時 OP 最小，最小值為 √8 = 2√2。",
+      "expected_output": "Grades against the official 113 rubric: item 1 (range 2−2√3 ≤ c ≤ 2+2√3) earned; item 2 not earned because c=−2 is outside the range — minimum is at c=2−2√3 giving 4(√3−1); score about 4/8 stated as estimate; quotes student lines; maps the error to F-10-1/F-10-3 (二次函數在區間的極值、範圍檢查) and 測驗目標; gives full-mark writing points.",
+      "files": [],
+      "assertions": [
+        "Judges the student's range 2−2√3 ≤ c ≤ 2+2√3 as correct",
+        "Points out that c = −2 lies outside the allowed range, so the minimum cannot be taken there",
+        "Gives the correct minimum OP = 4(√3−1) (or √(64−32√3)) at c = 2−2√3",
+        "Gives a total score between 3 and 5 out of 8",
+        "Grades against the official 113 評分原則 structure (two scoring items: range; boundary/minimum)",
+        "Maps the error to a 學習內容 code (e.g. F-10-1 / F-10-3) or names the 測驗目標",
+        "Quotes the student's own lines as evidence"
+      ]
+    },
+    {
+      "id": 4,
+      "name": "science-grade-112-47-and-diagnose",
+      "prompt": "這是112學測自然第47題（4分），請依學測評分原則幫我改，然後幫我診斷弱點、給我兩週的加強計畫。\n\n題目：小花根據乳糖發酵生成乳酸的資訊，提出了乳糖發酵的反應式（式1：乳糖 → 乳酸），並測試表8中各種不同的發酵條件對乳酪製作的影響。\n表8\n組別：甲 乙 丙 丁 戊 己 庚 辛\n微生物種類：A B A C A B B A\n發酵溫度（℃）：28 32 40 40 28 32 32 28\n熟成時間（小時）：24 5 24 24 24 10 12 24\n添加食鹽（%）：0.02 0.1 0.1 0.05 0.1 0.1 0.1 0.05\n（a）若依照小花的預期，乳糖在水溶液中發酵生成乳酸的化學反應式為何？（各物質須以分子式表示，並以最簡係數平衡）（2分）\n（b）若小花想知道熟成時間對乳酪製作的影響，應該挑選表8中哪三組條件下做出的乳酪來作比較？（1分）說明你的根據為何。（1分）\n\n我的作答：\n(a) C12H22O11 + H2O → 2 C3H6O3\n(b) 選甲、戊、辛，因為它們的微生物都是A、溫度都是28度、熟成時間都是24小時，比較起來最公平。\n\n另外我模考還錯了 111自然第13題 和 115自然第21題。",
+      "expected_output": "Grades per official 112-47 rubric: (a) species correct but coefficient wrong (should be 4 C3H6O3) → 1/2; (b) wrong groups (should be 乙、己、庚; student's groups hold 熟成時間 constant, varying 食鹽) → 0/2; total 1/4. Diagnoses: CJa-Vc-2 balancing (atom count) and 探究 變因控制 (操縱變因 must differ, others same); identifies 111-13 and 115-21 as 酸鹼指示劑/pH (CJd-Vc-3/4) items; 2-week plan with specific past questions.",
+      "files": [],
+      "assertions": [
+        "Identifies the correct equation C12H22O11 + H2O → 4 C3H6O3 (coefficient 4, not 2)",
+        "Awards 1/2 for part (a) (species correct, coefficients wrong)",
+        "Identifies the correct groups 乙、己、庚 for part (b)",
+        "Awards 0/2 for part (b)",
+        "States a total of 1/4",
+        "Correctly identifies 111自然第13題 and 115自然第21題 as 酸鹼指示劑／pH items",
+        "Provides a two-week plan that names specific past-paper questions to practise",
+        "Maps weaknesses to 學習內容 codes (e.g. CJa-Vc-2, CJd-Vc-3) or 探究與實作 (變因)"
+      ]
+    }
+  ]
+}
