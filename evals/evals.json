@@ -68,6 +68,56 @@
         "Provides a two-week plan that names specific past-paper questions to practise",
         "Maps weaknesses to 學習內容 codes (e.g. CJa-Vc-2, CJd-Vc-3) or 探究與實作 (變因)"
       ]
+    },
+    {
+      "id": 5,
+      "name": "english-essay-grading",
+      "prompt": "幫我照學測英文作文的評分標準改這篇，四個分項各幾分？總分？\n\n題目（114學測）：每逢颱風逼近臺灣，各縣市政府會依氣象預報決定隔日是否停止上班上課。文分兩段，第一段根據對比圖片描述颱風假時實際上可能出現的兩種不同情景；第二段說明你對放颱風假的看法與經驗。\n\n我的作文：\nWhen typhoon is coming, government will announce typhoon day. In first picture, the weather is very bad, the wind is strong and rain is heavy, people stay at home and watch TV. In second picture, the sun is shining, many people go to the department store and go to the movie, it is very crowd. This two situation is very different.\nI think typhoon day is good and bad. It is good because people can be safe. But sometimes the typhoon do not come and people go out to play, it is waste. Last year I have a typhoon day, I play video game all day and I feel very happy. So I think government should decide carefully.",
+      "expected_output": "Grades with the official four-part rubric (內容/組織/文法句構/字彙拼字, 5 each); notes the essay is under 120 words (−1) and has two paragraphs; identifies frequent grammar errors (articles, agreement, tense, run-ons) and limited vocabulary; total roughly 8–11/20 labelled as an estimate; quotes and corrects errors; gives upgrade advice; replies in 繁體中文.",
+      "files": [],
+      "assertions": [
+        "Gives four separate sub-scores for 內容、組織、文法句構、字彙拼字, each on a 0–5 scale",
+        "States the total as the sum of sub-scores out of 20 (after any deduction)",
+        "Notices the essay is clearly under 120 words and applies (or mentions) the 1-point deduction",
+        "Total score given is between 6 and 12 out of 20",
+        "Corrects at least three specific grammar errors from the essay (e.g. 'When typhoon is coming', 'This two situation', 'the typhoon do not come', 'I have a typhoon day')",
+        "Labels the score as an estimate rather than an official score",
+        "Explanatory text is in 繁體中文"
+      ]
+    },
+    {
+      "id": 6,
+      "name": "chinese-mock-mixed-set",
+      "prompt": "幫我出一組學測國綜第貳部分的混合題（仿113–115的形式），要有甲乙兩篇文本，選擇題跟非選擇題都要有，附答案、測驗目標跟評分原則。",
+      "expected_output": "A single 題組 (e.g. 32-36為題組) with 甲乙 texts (attributed or labelled 自編), 單選 items marked （占2分，單選題） with 4 options, 非選 sub-items with points and 作答字數 limits, total 24分 (or clearly stated total), each item tagged with A1–B5 測驗目標, 滿分參考答案 with 或 alternatives, and 評分原則 in official tiers (2/0 and 4/2/0); labelled GSAT-Tutor 模擬題.",
+      "files": [],
+      "assertions": [
+        "Has a 題組 header in official style (e.g. 「32-36為題組」)",
+        "Includes at least two texts labelled 甲、乙 with attribution or a 自編 label",
+        "Includes at least one 單選 item with exactly four options (A)–(D) and a stated 2分",
+        "Includes at least two 非選 sub-items with point values and 作答字數 limits",
+        "Tags items with 測驗目標 codes from A1–A6/B1–B5",
+        "Gives 評分原則 using the official tiers (e.g. 能寫出參考答案大意，且敘述完整 4分／部分錯誤或不完整 2分／0分)",
+        "Points of all items add up to the stated total",
+        "Does not attribute fabricated quotations to real classical authors (texts are either real and accurate, or labelled 自編)"
+      ]
+    },
+    {
+      "id": 7,
+      "name": "chinese-writing-grade-qinyi",
+      "prompt": "這是我寫的學測國寫第二大題（115年題目：以「隔在我們之間的種種」為題，陳述與對象產生隔閡的原因，試著換位思考，並傳達自己的回應）。請幫我評等級跟分數，並告訴我怎麼升級。\n\n隔在我們之間的種種\n我和爸爸之間好像隔著一道牆。他每天很晚回家，回來就看新聞，很少跟我說話。我考試考不好時，他只會說「要再努力」。我覺得他根本不了解我。\n有一次我生病發燒，半夜醒來，發現爸爸坐在床邊，手裡拿著毛巾。他看到我醒來，只說了一句「睡吧」。那一刻我突然覺得，也許他不是不在乎，只是不知道怎麼說。\n現在我會試著先跟他說學校的事，雖然他還是話不多，但我知道牆正在慢慢變矮。",
+      "expected_output": "Grades by 先等→後級→再分數 against the 115 第二大題 rubric (原因／換位思考／回應) and 情意 表現描述; judges it roughly B+ (14–17) with concrete scene but brief development; checks the three required components; notes length and depth; gives upgrade advice and at most one rewritten paragraph; score labelled as estimate; in 繁體中文.",
+      "files": [],
+      "assertions": [
+        "Uses the 三等六級 system (A+/A/B+/B/C+/C) and gives both a 級 and a numeric score out of 25",
+        "Score given is between 12 and 19 out of 25",
+        "Checks the three required components from the 115 prompt: 隔閡的原因、換位思考、傳達回應",
+        "References the 情意 表現描述 or the official 115 rubric wording (e.g. 結構完整、文辭流暢／體悟深刻)",
+        "Quotes the student's own sentences as evidence",
+        "Gives concrete upgrade advice (e.g. deepen 換位思考, add detail, develop the 回應)",
+        "Does not rewrite the whole essay (at most one model paragraph)",
+        "Labels the score as an estimate; reply in 繁體中文"
+      ]
     }
   ]
 }
