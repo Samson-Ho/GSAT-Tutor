@@ -20,8 +20,7 @@ A Claude plugin (and portable Agent Skill) that tutors students for Taiwan's Gen
 
 ## 安裝
 
-### Claude App（網頁、桌面、手機、iPad）
-需付費方案（Pro、Max、Team、Enterprise）。
+### Claude App
 1. 在 [claude.ai](https://claude.ai) 網頁或 Claude 桌面版打開 **Customize › Plugins**。
 2. 點 **Add › Add marketplace › Add from a repository**，貼上 `Samson-Ho/GSAT-Tutor`（或 `https://github.com/Samson-Ho/GSAT-Tutor`）。
 3. 同步完成後，在 **Discover** 找到 **GSAT-Tutor 學測家教**，點 **Add**。
@@ -29,15 +28,12 @@ A Claude plugin (and portable Agent Skill) that tutors students for Taiwan's Gen
 插件裝在你的帳號上，之後在手機與 iPad 的 Claude App 對話中也能直接使用；直接說「幫我出一題學測數A」「幫我改這篇英文作文」「這篇國寫幾級分」即可觸發。（新增插件的步驟請在網頁或桌面版完成。）
 
 ### Claude Code
-```
+```sh
 /plugin marketplace add Samson-Ho/GSAT-Tutor
 /plugin install gsat-tutor@gsat-tutor-marketplace
 ```
 
-### ChatGPT（手機、iPad、網頁版）
-
-若你的 ChatGPT 介面提供 **新增市集（Add marketplace）**，可透過以下步驟加入本專案並安裝插件：
-
+### ChatGPT App
 1. 開啟 ChatGPT App 或 [ChatGPT 網頁版](https://chatgpt.com)，展開 **側邊欄**（手機與 iPad 請點左上角的側邊欄按鈕）。
 2. 進入 **插件（Plugins）**，點 **新增（Add）› 新增市集（Add marketplace）**。
 3. 在市集來源欄位貼上 GitHub 儲存庫網址：`https://github.com/Samson-Ho/GSAT-Tutor`。
@@ -45,7 +41,11 @@ A Claude plugin (and portable Agent Skill) that tutors students for Taiwan's Gen
 5. 在新增的 **gsat-tutor-marketplace** 市集中找到 **GSAT-Tutor 學測家教（gsat-tutor）**，開啟插件詳情，點 **安裝（Install）** 或 **＋**。一次安裝即可取得數A、自然、英文、國綜、國寫五科技能。
 6. 安裝完成後，開啟 **新對話**，輸入「請用 GSAT-Tutor 幫我出一題學測數A」「幫我改這篇英文作文」或「這篇國寫幾級分」即可開始使用。
 
-若手機或 iPad App 看不到 **新增市集**，請改用網頁版查看；入口與市集來源的支援可能因帳號或版本而異。插件在各裝置上的使用方式可參考 [OpenAI 官方插件說明](https://learn.chatgpt.com/docs/plugins)。
+### Codex
+```sh
+codex plugin marketplace add Samson-Ho/GSAT-Tutor
+codex plugin add gsat-tutor@gsat-tutor-marketplace
+```
 
 ## 結構
 每個科目是一個獨立的 skill，內容互不影響：
