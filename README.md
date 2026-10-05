@@ -25,7 +25,7 @@ A Claude plugin (and portable Agent Skill) that tutors students for Taiwan's Gen
 2. 點 **Add › Add marketplace › Add from a repository**，貼上 `Samson-Ho/GSAT-Tutor`（或 `https://github.com/Samson-Ho/GSAT-Tutor`）。
 3. 同步完成後，在 **Discover** 找到 **GSAT-Tutor 學測家教**，點 **Add**。
 
-插件裝在你的帳號上，之後在手機與 iPad 的 Claude App 對話中也能直接使用；直接說「幫我出一題學測數A」「幫我改這篇英文作文」「這篇國寫幾級分」即可觸發。（新增插件的步驟請在網頁或桌面版完成。）
+插件裝在你的帳號上，之後在手機與 iPad 的 Claude App 對話中也能直接使用；使用對話框左側加號，選擇plugin中的 GSAT-Tutor 即可觸發。（新增插件的步驟請在網頁或桌面版完成。）
 
 ### Claude Code
 ```sh
@@ -39,7 +39,7 @@ A Claude plugin (and portable Agent Skill) that tutors students for Taiwan's Gen
 3. 在市集來源欄位貼上 GitHub 儲存庫網址：`https://github.com/Samson-Ho/GSAT-Tutor`。
 4. 依畫面提示確認新增，等待市集載入。
 5. 在新增的 **gsat-tutor-marketplace** 市集中找到 **GSAT-Tutor 學測家教（gsat-tutor）**，開啟插件詳情，點 **安裝（Install）** 或 **＋**。一次安裝即可取得數A、自然、英文、國綜、國寫五科技能。
-6. 安裝完成後，開啟 **新對話**，輸入「請用 GSAT-Tutor 幫我出一題學測數A」「幫我改這篇英文作文」或「這篇國寫幾級分」即可開始使用。
+6. 安裝完成後，開啟 **新對話**，輸入「@GSAT-Tutor」即可開始使用。
 
 ### Codex
 ```sh
