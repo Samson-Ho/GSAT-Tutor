@@ -51,7 +51,7 @@ Counts are approximate because many items span two units, e.g. 113-11 方程組�
 | 疊合 / trig graph counting | Rewrite as $r\sin(x+\phi)$; count intersections or solutions on an interval; symmetry axes; sums of roots | 參考-12, 110-6, 112-12, 113-4, 114-5, 114-10, 115-11 |
 | 機率 in real context | Rapid tests, lotteries, games, gacha, independence from a table, Bayes with "已知…的條件下" | 111-5, 111-13, 113-15, 114-1, 114-15, 115-1, 115-13 |
 | 計數 with structure | Arrangements with blocks and order constraints, choosing with repetition, merging duplicates by category | 111-1, 112-4, 113-5, 114-3, 115-4 |
-| 矩陣 as transformation | Rotation, reflection and shear matrices; composition; invariance (area = \|det\|); fixed points; inverse existence | 112-11, 113-12, 114-18~20, 參考-6, 110-18~20 |
+| 矩陣 as transformation | Rotation, reflection and shear matrices; composition; invariance (area scales by the absolute value of the 行列式 $\begin{vmatrix} a & b \\ c & d \end{vmatrix}$); fixed points; inverse existence | 112-11, 113-12, 114-18~20, 參考-6, 110-18~20 |
 | 方程組 / 高斯消去 | Augmented matrix after elimination given, solve for parameters; data table → 3×3 system | 參考-15, 111-14, 112-13, 113-11, 115-5 |
 | 空間 with cross products | Normal vector via 外積, plane through points, distance to planes, volume via 三重積, projections | 111-16/17, 112-5/16/17, 113-18~20, 114-6/14, 115-18~20 |
 | 平面向量 decomposition | 分點公式, 角平分線, region conditions (p,q ≥ 0, p+q < 1), areas via determinants | 參考-11, 111-9, 113-10, 114-11, 115-10 |

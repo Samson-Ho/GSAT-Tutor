@@ -25,6 +25,8 @@ The 考試說明 often gives ranges (e.g. 自然 選擇題 70–80%). The actual
 - **Write rubrics (評分原則) in 繁體中文**, in the official style.
 - Reference files are written in English for the agent, with official Chinese terms kept verbatim. Don't show the English scaffolding to students.
 - Write formulas and equations in LaTeX (`$...$`). Fall back to Unicode (x², √3, ≤) only if the interface clearly can't render LaTeX.
+- **Vectors** (位移、速度、力、電場、磁場…): write them with arrows, as 學測 papers and Taiwan textbooks do: `\vec{v}`, `\vec{F}`, `\vec{E}`. Don't use bold (`\mathbf{F}`, `\boldsymbol{v}`, **F**) to tell vectors from scalars; a plain letter ($v$, $F$) means the magnitude.
+- **Determinants (行列式)**, if one is ever needed: write `\begin{vmatrix} … \end{vmatrix}`, not `\det(\cdot)`.
 
 ## 3. Scope of this skill
 

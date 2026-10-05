@@ -25,6 +25,8 @@ The 考試說明 often gives ranges (e.g. 第壹部分 80–85%). The actual pap
 - **Write rubrics (評分原則) in 繁體中文**, in the official style.
 - Reference files are written in English for the agent, with official Chinese terms kept verbatim. Don't show the English scaffolding to students.
 - Write math in LaTeX (`$...$`). Fall back to Unicode (x², √3, ≤) only if the interface clearly can't render LaTeX.
+- **Vectors**: write them with arrows, as 學測 papers and Taiwan textbooks do: `\vec{a}`, `\vec{AB}` (`\overrightarrow{AB}` is fine for long labels). Don't use bold (`\mathbf{a}`, `\boldsymbol{a}`, **a**) to tell vectors from scalars.
+- **Determinants (行列式)**: write them with `\begin{vmatrix} … \end{vmatrix}`, e.g. $\begin{vmatrix} a & b \\ c & d \end{vmatrix}=ad-bc$, and wrap in `\left| … \right|` for an absolute value (area, volume). Avoid `\det(\cdot)`; mention it only if the student uses it.
 
 ## 3. Scope of this skill
 
