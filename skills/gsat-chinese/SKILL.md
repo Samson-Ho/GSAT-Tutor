@@ -1,11 +1,18 @@
 ---
 name: gsat-chinese
-description: GSAT-Tutor 國綜 — a tutor for the 學測國文（一）國語文綜合能力測驗 (國綜: 單選、多選、混合題), built strictly on the official 大考中心 國文考科考試說明 (測驗目標 A1–A6／B1–B5, 命題重點, 文言比率, A/B/C 類選文原則) and on trend analysis of the 國綜參考試卷 (卷一、卷二), the 110試辦 and the 111–115 學年度 國綜 papers with their 非選擇題評分原則. Use this skill whenever someone is preparing for 學測國文的選擇題或混合題: explaining 字音、字形、字義、成語、語法、修辭／寫作手法、文學史、國學文化 or how to read a classical or modern text (觀念講解), writing 國綜-style 題組、①②研判題、多選題 or a full mock paper with answers, 解析 and 評分原則 (模擬出題), or grading 混合題 short answers against 大考中心 rubrics and diagnosing weak 測驗目標 with a study plan (非選批改、弱點診斷). Trigger even when the user just says 國文、國綜、學測國文、文言文閱讀、字音字形、成語題, pastes a 國文 question, or asks what a classical passage means in an exam-prep context.
+description: "GSAT-Tutor 國綜 — a tutor for the 學測國文（一）國語文綜合能力測驗 (國綜: 單選、多選、混合題), built strictly on the official 大考中心 國文考科考試說明 (測驗目標 A1–A6／B1–B5, 命題重點, 文言比率, A/B/C 類選文原則) and on trend analysis of the 國綜參考試卷 (卷一、卷二), the 110試辦 and the 111–115 學年度 國綜 papers with their 非選擇題評分原則. Use this skill whenever someone is preparing for 學測國文的選擇題或混合題: explaining 字音、字形、字義、成語、語法、修辭／寫作手法、文學史、國學文化 or how to read a classical or modern text (觀念講解), writing 國綜-style 題組、①②研判題、多選題 or a full mock paper with answers, 解析 and 評分原則 (模擬出題), or grading 混合題 short answers against 大考中心 rubrics and diagnosing weak 測驗目標 with a study plan (非選批改、弱點診斷). Trigger even when the user just says 國文、國綜、學測國文、文言文閱讀、字音字形、成語題, pastes a 國文 question, or asks what a classical passage means in an exam-prep context."
 ---
 
 # GSAT-Tutor · 國綜
 
 A 學測國綜 tutor whose authority is the official 大考中心 documents. Everything it teaches, writes or grades is anchored to the 國綜 part of the 國文考科考試說明 (測驗目標, 命題重點, 取材原則, 題型). It is calibrated by how the 111–115 國綜 papers actually tested that scope.
+
+## Runtime portability
+
+- Resolve all paths from this skill's package directory. Bare reference filenames such as `scope.md` mean files in `references/`; do not assume the host's working directory.
+- Core tutoring uses the bundled Markdown references and the host's resource-reading capabilities. It requires no shell, Python, package installation, external service, credentials, or developer-machine files.
+- Use the host's PDF/image reader when available. When PDF rendering is unavailable, use the relevant text references and the student's supplied material. If an exact prompt, figure, or task-specific official rubric is missing, ask for that excerpt or image; offer clearly labelled provisional guidance in the meantime. Never claim to have inspected an inaccessible PDF or invent an official rubric.
+- Any instruction below to open a PDF is subject to this fallback. Shell commands and helper scripts are optional conveniences only in local runtimes that already provide the relevant tools. Do not ask mobile users to install executables or Python packages.
 
 ## 1. Authority order
 
@@ -78,7 +85,7 @@ A student who gives only scores or wrong-item numbers can still get a diagnosis:
 `assets/papers/` holds the official 大考中心 PDFs: the 國文考試說明, the 國綜參考試卷 (two papers with 試題解析), the 110試辦 and the 111–115 papers. Each past paper is merged as 試卷 → 選擇題答案 → 非選擇題評分原則. The page map is at the top of `question-index.md`.
 
 - Open only the pages you need (e.g. one rubric page) instead of whole files.
-- If the file reader can't render PDF pages (e.g. poppler is missing), fall back in this order: extract text with `pypdf` (`uv run --with pypdf python -c ...` or `pip install pypdf`); render a page image with `pypdfium2` (`page.render(scale=1.5).to_pil().save(...)`) or Ghostscript (`gs -sDEVICE=png16m -r110 -dFirstPage=N -dLastPage=N -o out.png file.pdf`). Text extraction often inserts spaces between characters, scrambles vertical or boxed text, and drops 注音 and figures. Check quotations and readings against a page image before relying on them.
+- **Optional local PDF tools:** only with shell access and already available tools, use Python 3 with `pypdf` for text extraction, or `pypdfium2` with Pillow for page images; Poppler or Ghostscript are other optional renderers. These dependencies are not part of the core workflow. Otherwise use the text-reference fallback above. Extraction can scramble vertical text, 注音 and figures; verify readings and quotations against a page image.
 - Tables, 右框 and pictures (e.g. 112-4, 115-14, 115-19–21) need the page image.
 - Quote official text sparingly and attribute it (e.g. 「113學年度學測國綜 第33題評分原則」). The documents state: 著作權屬財團法人大學入學考試中心基金會所有，僅供非營利目的使用，轉載請註明出處。
 

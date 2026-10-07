@@ -1,0 +1,41 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "gsat-tutor",
+  "version": "1.2.0",
+  "description": "學測（GSAT）家教：依大考中心考試說明與 111–115 學測趨勢，提供數A、自然、英文、國綜、國寫的觀念講解、模擬出題、非選批改與弱點診斷。Tutors Taiwan's GSAT (數A, 自然, 英文, 國綜, 國寫) anchored to the official CEEC exam guidelines.",
+  "author": {
+    "name": "Samson Ho",
+    "url": "https://github.com/Samson-Ho"
+  },
+  "homepage": "https://github.com/Samson-Ho/GSAT-Tutor",
+  "repository": "https://github.com/Samson-Ho/GSAT-Tutor",
+  "license": "GPL-3.0",
+  "keywords": [
+    "學測", "GSAT", "Taiwan", "education", "數A", "自然", "英文",
+    "國文", "國綜", "國寫", "exam-prep"
+  ],
+  "extensions": {
+    "com.openai": {
+      "interface": {
+        "displayName": "GSAT-Tutor 學測家教",
+        "shortDescription": "台灣學測 AI 家教",
+        "longDescription": "協助準備台灣學科能力測驗（GSAT），涵蓋數學A、自然（物理、化學、生物、地球科學）、英文、國綜與國寫。依所附大考中心考試說明及 111–115 學年度試題資料，提供觀念講解、學測形式的模擬練習、非選擇題與作文回饋、弱點診斷和讀書計畫。英文含高中英文參考詞彙表級數查詢。生成題目會標示為模擬題，評分為學習用估計，並非官方成績。GSAT-Tutor 是 Samson Ho 開發的獨立學習工具，與大考中心、OpenAI、Anthropic、任何大學或政府機關均無隸屬或背書關係。",
+        "developerName": "Samson Ho",
+        "category": "Education & Research",
+        "logo": "./assets/icon.png",
+        "composerIcon": "./assets/icon.png",
+        "capabilities": ["觀念講解", "模擬出題", "作文與非選擇題回饋", "弱點診斷與讀書計畫"],
+        "websiteURL": "https://github.com/Samson-Ho/GSAT-Tutor",
+        "supportURL": "https://github.com/Samson-Ho/GSAT-Tutor/issues",
+        "defaultPrompt": [
+          "幫我整理學測數A條件機率的核心觀念，並出三題練習。",
+          "用學測程度解釋梅雨鋒面與中尺度對流系統。",
+          "請依學測英文作文評分方式批改這篇作文。"
+        ]
+      },
+      "publication": {
+        "release_notes": "新增可攜式 OpenAI 套件與可重現的 ZIP 建置、驗證流程；保留既有 Claude 與本機市集安裝方式，將本機 PDF 與英文詞彙工具改為選用。"
+      }
+    }
+  }
+}

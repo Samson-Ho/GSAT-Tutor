@@ -1,11 +1,18 @@
 ---
 name: gsat-chinese-writing
-description: GSAT-Tutor 國寫 — a tutor for the 學測國文（二）國語文寫作能力測驗 (國寫), built strictly on the official 大考中心 國文考科考試說明 (國寫 section: 知性的統整判斷、情意的感受抒發, 三等六級評分, 表現描述) and on trend analysis of the 國寫參考試卷 and the 111–115 學年度 國寫 papers with their 閱卷評分原則. Use this skill whenever someone is preparing for 國寫: explaining how 國寫 works or how to approach 知性題／情意題 (觀念講解), writing 國寫-style tasks or full mock papers with material, 參考答案要點 and 評分原則 (模擬出題), or grading a student's 國寫 essay or 問題（一）／問題（二） answer by 等→級→分數 against 大考中心-style rubrics, then diagnosing weaknesses and building a writing plan (批改、弱點診斷). Trigger even when the user just says 國寫、學測作文、國文作文、知性題、情意題、引導寫作, pastes a Chinese essay for scoring, asks 「這篇幾級分」「A+ 要怎麼寫」, or mentions 三等六級、表現描述、問題（一）80字.
+description: "GSAT-Tutor 國寫 — a tutor for the 學測國文（二）國語文寫作能力測驗 (國寫), built strictly on the official 大考中心 國文考科考試說明 (國寫 section: 知性的統整判斷、情意的感受抒發, 三等六級評分, 表現描述) and on trend analysis of the 國寫參考試卷 and the 111–115 學年度 國寫 papers with their 閱卷評分原則. Use this skill whenever someone is preparing for 國寫: explaining how 國寫 works or how to approach 知性題／情意題 (觀念講解), writing 國寫-style tasks or full mock papers with material, 參考答案要點 and 評分原則 (模擬出題), or grading a student's 國寫 essay or 問題（一）／問題（二） answer by 等→級→分數 against 大考中心-style rubrics, then diagnosing weaknesses and building a writing plan (批改、弱點診斷). Trigger even when the user just says 國寫、學測作文、國文作文、知性題、情意題、引導寫作, pastes a Chinese essay for scoring, asks 「這篇幾級分」「A+ 要怎麼寫」, or mentions 三等六級、表現描述、問題（一）80字."
 ---
 
 # GSAT-Tutor · 國寫
 
 A 學測國寫 tutor whose authority is the official 大考中心 documents. Everything it teaches, writes or grades is anchored to the 國寫 section of the 國文考科考試說明 (objectives, format, 三等六級, 表現描述). It is calibrated by how the 111–115 國寫 papers and their 閱卷評分原則 actually set and graded tasks.
+
+## Runtime portability
+
+- Resolve all paths from this skill's package directory. Bare reference filenames such as `scope.md` mean files in `references/`; do not assume the host's working directory.
+- Core tutoring uses the bundled Markdown references and the host's resource-reading capabilities. It requires no shell, Python, package installation, external service, credentials, or developer-machine files.
+- Use the host's PDF/image reader when available. When PDF rendering is unavailable, use the relevant text references and the student's supplied material. If an exact prompt, figure, or task-specific official rubric is missing, ask for that excerpt or image; offer clearly labelled provisional guidance in the meantime. Never claim to have inspected an inaccessible PDF or invent an official rubric.
+- Any instruction below to open a PDF is subject to this fallback. Shell commands and helper scripts are optional conveniences only in local runtimes that already provide the relevant tools. Do not ask mobile users to install executables or Python packages.
 
 ## 1. Authority order
 
@@ -72,7 +79,7 @@ Detect the mode from the request. Requests often combine modes, e.g. grade my es
 `assets/papers/` holds the official 大考中心 PDFs: the 國文考試說明 (國寫 part p31–58), the 國寫參考試卷 (四卷 with 解析 and 評分原則), and the 111–115 papers. Each 111–115 PDF is the 試卷 followed by the 閱卷評分原則說明. The page map is at the top of `question-index.md`.
 
 - Open only the pages you need (e.g. the 評分原則 pages for one year) instead of whole files.
-- If the file reader can't render PDF pages (e.g. poppler is missing), fall back in this order: extract text with `pypdf` (`uv run --with pypdf python -c ...` or `pip install pypdf`); render a page image with `pypdfium2` (`page.render(scale=1.5).to_pil().save(...)`) or Ghostscript (`gs -sDEVICE=png16m -r110 -dFirstPage=N -dLastPage=N -o out.png file.pdf`). Some PDFs extract with spaces between characters; read past them.
+- **Optional local PDF tools:** only with shell access and already available tools, use Python 3 with `pypdf` for text extraction, or `pypdfium2` with Pillow for page images; Poppler or Ghostscript are other optional renderers. These dependencies are not part of the core workflow. Otherwise use the text-reference fallback above. Some PDFs extract with spaces between characters; read past them.
 - Picture prompts (115 幾米, 參考 炙艾圖, 漫畫) need a page image to understand. Look at it before explaining or grading.
 - Quote official text sparingly and attribute it (e.g. 「115學年度學測國寫閱卷評分原則說明」). The documents state: 著作權屬財團法人大學入學考試中心基金會所有，僅供非營利目的使用，轉載請註明出處。
 

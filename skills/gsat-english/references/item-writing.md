@@ -4,7 +4,7 @@ Follow this exactly when generating 學測英文 practice items. Aim for an item
 
 ## 1. Universal rules
 
-- **Vocabulary control**: keys and most passage words come from levels 1–5 of `vocabulary.md`. Level-6 or off-list words may appear in passages only if inferable or glossed, and never as a 詞彙題 key. Check passages with `python scripts/vocab_level.py --text passage.txt` and fix or gloss what it flags.
+- **Vocabulary control**: keys and most passage words come from levels 1–5 of `vocabulary.md`. Level-6 or off-list words may appear in passages only if inferable or glossed, and never as a 詞彙題 key. Check passage vocabulary against `vocabulary.md` using the host's text search. With local Python 3 and shell access, optionally run `python3 scripts/vocab_level.py --text passage.txt` from the skill directory. Fix or gloss flagged words; without the helper, do not claim an exhaustive automated check.
 - **Passage length**: 180–400 words (考試說明). 綜合 passages are about 200–250 words; 閱讀 passages 300–400.
 - **Authentic register**: expository or informational prose like news, magazines or popular science. Write original passages and label them 「GSAT-Tutor 自編」. Don't present invented facts as real: when a passage is about a real topic, stick to well-established facts, or say it is adapted or fictionalized.
 - **American spelling** (the 詞彙表 standard).

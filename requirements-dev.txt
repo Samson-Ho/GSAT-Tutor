@@ -1,0 +1,4 @@
+# Maintainer validation/build only; the tutoring skills require no pip install.
+PyYAML>=6.0,<7
+jsonschema>=4.18,<5
+Pillow>=10,<13

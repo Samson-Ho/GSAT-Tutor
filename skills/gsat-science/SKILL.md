@@ -1,11 +1,18 @@
 ---
 name: gsat-science
-description: GSAT-Tutor 自然 — a tutor for the 學測 (GSAT) 自然考科 (物理、化學、生物、地球科學 部定必修＋探究與實作), built strictly on the official 大考中心 自然考科考試說明 and on trend analysis of the 參考試卷, 109/110試辦考試 and 111–115 學年度 自然 papers. Use this skill whenever someone is preparing for 學測自然: explaining a science concept within the 必修 scope (觀念講解), writing 學測-style 單選／多選（應選n項）／跨科題組／混合題 or full mock papers with answers, 詳解 and 評分原則 (模擬出題), or grading a student's 自然 非選擇題 (作圖、方程式、計算、說明) against 大考中心-style rubrics and diagnosing weak 學習內容 units with a study plan (非選批改、弱點診斷). Trigger even when the user only says 自然科、學測物理／化學／生物／地科, asks whether a topic 會不會考, pastes a 學測自然 question, or mentions 颱風、潮汐、電磁感應、都卜勒、相圖、指示劑、遺傳譜系、親緣樹、探究變因 in an exam-prep context.
+description: "GSAT-Tutor 自然 — a tutor for the 學測 (GSAT) 自然考科 (物理、化學、生物、地球科學 部定必修＋探究與實作), built strictly on the official 大考中心 自然考科考試說明 and on trend analysis of the 參考試卷, 109/110試辦考試 and 111–115 學年度 自然 papers. Use this skill whenever someone is preparing for 學測自然: explaining a science concept within the 必修 scope (觀念講解), writing 學測-style 單選／多選（應選n項）／跨科題組／混合題 or full mock papers with answers, 詳解 and 評分原則 (模擬出題), or grading a student's 自然 非選擇題 (作圖、方程式、計算、說明) against 大考中心-style rubrics and diagnosing weak 學習內容 units with a study plan (非選批改、弱點診斷). Trigger even when the user only says 自然科、學測物理／化學／生物／地科, asks whether a topic 會不會考, pastes a 學測自然 question, or mentions 颱風、潮汐、電磁感應、都卜勒、相圖、指示劑、遺傳譜系、親緣樹、探究變因 in an exam-prep context."
 ---
 
 # GSAT-Tutor · 自然
 
 A 學測自然 tutor whose authority is the official 大考中心 documents. Everything it teaches, writes or grades is anchored to the 自然考科考試說明 (scope, objectives, paper structure) and calibrated by how the 111–115 自然 papers actually tested that scope.
+
+## Runtime portability
+
+- Resolve all paths from this skill's package directory. Bare reference filenames such as `scope.md` mean files in `references/`; do not assume the host's working directory.
+- Core tutoring uses the bundled Markdown references and the host's resource-reading capabilities. It requires no shell, Python, package installation, external service, credentials, or developer-machine files.
+- Use the host's PDF/image reader when available. When PDF rendering is unavailable, use the relevant text references and the student's supplied material. If an exact prompt, figure, or task-specific official rubric is missing, ask for that excerpt or image; offer clearly labelled provisional guidance in the meantime. Never claim to have inspected an inaccessible PDF or invent an official rubric.
+- Any instruction below to open a PDF is subject to this fallback. Shell commands and helper scripts are optional conveniences only in local runtimes that already provide the relevant tools. Do not ask mobile users to install executables or Python packages.
 
 ## 1. Authority order
 
@@ -91,7 +98,7 @@ A student who reports only scores or topic names, without answers, can still get
 `assets/papers/` holds the official 大考中心 PDFs: the 考試說明, 參考試卷, 試辦考試 and 111–115 papers. Each past-paper PDF is merged as 試卷 → 選擇(填)題答案 → 非選擇題評分原則. The page map is at the top of `question-index.md`.
 
 - Open only the pages you need (e.g. the 評分原則 page for one question) instead of whole files.
-- If the file reader can't render PDF pages (e.g. poppler is missing), fall back in this order: extract text with `pypdf` (`uv run --with pypdf python -c ...` or `pip install pypdf`); render a page image with `pypdfium2` (`page.render(scale=1.5).to_pil().save(...)`) or Ghostscript (`gs -sDEVICE=png16m -r110 -dFirstPage=N -dLastPage=N -o out.png file.pdf`). Text extraction garbles symbols, subscripts and minus signs, so check signs and formulas against a page image or the official answer before relying on them.
+- **Optional local PDF tools:** only with shell access and already available tools, use Python 3 with `pypdf` for text extraction, or `pypdfium2` with Pillow for page images; Poppler or Ghostscript are other optional renderers. These dependencies are not part of the core workflow. Otherwise use the text-reference fallback above. Check symbols, subscripts, signs, and formulas against a page image or verified answer before relying on extraction.
 - Figures and some math don't survive text extraction. When a question depends on a figure, look at the page image before explaining or grading it.
 - Quote official text sparingly and attribute it (e.g. 「112學年度學測自然 第47題評分原則」). The documents state: 著作權屬財團法人大學入學考試中心基金會所有，僅供非營利目的使用，轉載請註明出處。
 
