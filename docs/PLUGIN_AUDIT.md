@@ -57,9 +57,10 @@ checked-in executable runner.
   checks, and extracted-ZIP checks pass. These are packaging checks, not a
   malware analysis or the portal's security/safety scan.
 - **Public URLs:** repository homepage and GitHub Issues were fetched without
-  authentication and identified this project. `PRIVACY.md` is new local source;
-  its public page has not been published/verified, so `privacyPolicyURL` is
-  absent until the owner completes the documented publishing step. No terms
+  authentication and identified this project. `PRIVACY.md` was pushed to the public repository and its GitHub page was
+  fetched without authentication on 2026-10-07; its title, publisher, no-backend
+  statement, host-policy boundary and support link were verified before
+  `privacyPolicyURL` was added to the manifest. No terms
   URL or country availability was invented.
 - **Copyright:** existing CEEC attribution, non-commercial notices and GPL
   exclusions are preserved. The owner must confirm rights for public
@@ -81,10 +82,10 @@ The vendored, unmodified official schema has SHA-256:
 0a4aad95ce337878ad38802ebf0daa3fde76abe3f65400c86bcbb1ec0b3ab883
 ```
 
-Validation and all 17 regression tests pass on Python 3.9. Tests cover valid
+Validation and all 18 regression tests pass on Python 3.9. Tests cover valid
 source, real YAML parsing, invalid JSON/nonzero exit, schema-invalid fields,
 version drift, missing skills/PDFs, escaping references, final listing limits,
-category and prompts, credential URLs, corrupt/missing icons, accidental
+category and prompts, malformed interface objects, credential URLs, corrupt/missing icons, accidental
 secrets without echoing values, absolute machine paths, symlinks, marketplace
 source/duplicates, forbidden app/MCP configuration, deterministic ZIP contents,
 and the existing vocabulary helper from another working directory.

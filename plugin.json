@@ -27,6 +27,7 @@
         "capabilities": ["觀念講解", "模擬出題", "作文與非選擇題回饋", "弱點診斷與讀書計畫"],
         "websiteURL": "https://github.com/Samson-Ho/GSAT-Tutor",
         "supportURL": "https://github.com/Samson-Ho/GSAT-Tutor/issues",
+        "privacyPolicyURL": "https://github.com/Samson-Ho/GSAT-Tutor/blob/main/PRIVACY.md",
         "defaultPrompt": [
           "幫我整理學測數A條件機率的核心觀念，並出三題練習。",
           "用學測程度解釋梅雨鋒面與中尺度對流系統。",

@@ -23,7 +23,7 @@ SEMVER = re.compile(r"(0|[1-9]\d*)\.(0|[1-9]\d*)\.(0|[1-9]\d*)(?:-(?:0|[1-9]\d*|
 CATEGORIES = {"Productivity", "Creativity", "Developer Tools", "Business & Operations", "Data & Analytics", "Communication", "Education & Research", "Security", "Finance", "Healthcare", "Travel", "Entertainment", "Other"}
 SKILLS = {"gsat-math-a", "gsat-science", "gsat-english", "gsat-chinese", "gsat-chinese-writing"}
 IGNORED = {".DS_Store", "__pycache__", ".pytest_cache", ".venv", "node_modules"}
-LOCAL_PATH = re.compile(r"(?:/Users/|/home/|/private/|/opt/homebrew/|/usr/local/|[A-Za-z]:[\\/](?:Users|home)[\\/])")
+LOCAL_PATH = re.compile(r"(?<![\w:/])/(?:Users|home|private|tmp|var|etc|opt|usr|mnt|Volumes|workspace)/|\b[A-Za-z]:[\\/]")
 SECRETS = re.compile(r"-----BEGIN (?:RSA |EC |OPENSSH )?PRIVATE KEY-----|\b(?:gh[pousr]_[A-Za-z0-9]{30,}|github_pat_[A-Za-z0-9_]{30,}|sk-(?:proj-)?[A-Za-z0-9_-]{24,}|AKIA[0-9A-Z]{16})\b|(?:api[_-]?key|access[_-]?token|password|client[_-]?secret)\s*[:=]\s*[\"'][A-Za-z0-9+/=_-]{16,}[\"']", re.I)
 FILE_REF = re.compile(r"(?<![\w:/])((?:\.{1,2}/)?(?:[\w.-]+/)*[\w.-]+\.(?:md|pdf|py|json|ya?ml|png|svg|webp|jpe?g))\b")
 
@@ -199,6 +199,8 @@ def validate(root=ROOT, compatibility=True):
         extension = {}
     report.check(not any(extension.get(key) is not None for key in ("apps", "hooks", "mcpServers", "skills")), "skills-only portable extension must not declare apps, hooks, MCP or alternative skill directories")
     check_interface(root, extension.get("interface"), report)
+    if not isinstance(extension.get("interface"), dict):
+        return report
     if compatibility:
         claude = read_json(root / ".claude-plugin/plugin.json", report)
         for key in IDENTITY_FIELDS:
@@ -252,7 +254,9 @@ def validate(root=ROOT, compatibility=True):
                     report.check(source.read(5) == b"%PDF-", f"invalid PDF asset: {rel}")
             elif path.suffix in {".md", ".py", ".json", ".yaml", ".yml", ".txt"}:
                 content = path.read_text(encoding="utf-8")
-                report.check(not LOCAL_PATH.search(content), f"developer-machine absolute path in {rel}")
+                # The portable interpreter shebang is not a developer data path.
+                path_content = re.sub(r"\A#!/usr/bin/env python3[ \t]*\r?\n", "", content)
+                report.check(not LOCAL_PATH.search(path_content), f"developer-machine absolute path in {rel}")
                 report.check(not SECRETS.search(content), f"possible secret in {rel} (value withheld)")
                 if path.suffix == ".json":
                     read_json(path, report)
@@ -261,7 +265,8 @@ def validate(root=ROOT, compatibility=True):
     except (OSError, ValueError) as exc:
         report.errors.append(str(exc))
     report.warnings.append("Portal identity verification, safety/security scans, policy attestations, approval and publication remain required.")
-    report.warnings.append("PRIVACY.md is bundled; publish it to a public HTTPS page before final review and set privacyPolicyURL after verifying the page.")
+    if not extension.get("interface", {}).get("privacyPolicyURL"):
+        report.warnings.append("PRIVACY.md is bundled; publish it to a public HTTPS page before final review and set privacyPolicyURL after verifying the page.")
     return report
 
 

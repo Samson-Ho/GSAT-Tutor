@@ -99,13 +99,12 @@ official plugin validation command; the portal performs authoritative checks.
    these resources retain their existing non-commercial notices and are
    excluded from the project's GPL grant. Choose the release's country
    availability; it is intentionally not inferred from the subject or publisher.
-2. **Publish the privacy page first.** Commit/push `PRIVACY.md` through your
-   normal release process, then open
-   `https://github.com/Samson-Ho/GSAT-Tutor/blob/main/PRIVACY.md` without signing
-   in and confirm it serves the policy. Only after verifying that live page,
-   add its URL as `extensions.com.openai.interface.privacyPolicyURL` and
-   rebuild. This path is a future publishing step, not a verified live policy
-   in the current package. No policy URL has been guessed into the manifest.
+2. **Recheck the published privacy page.**
+   [PRIVACY.md on GitHub](https://github.com/Samson-Ho/GSAT-Tutor/blob/main/PRIVACY.md)
+   was published and verified without authentication on 2026-10-07. Its URL is
+   included as `extensions.com.openai.interface.privacyPolicyURL`. Confirm the
+   page still serves the current policy before each submission; if you move it,
+   verify the replacement HTTPS URL and rebuild the package.
 3. Open the [Plugin submission portal](https://platform.openai.com/plugins).
    Select the intended organization/project. An organization owner can submit;
    other members need **Apps Management Write**. Complete individual identity
@@ -149,7 +148,7 @@ official plugin validation command; the portal performs authoritative checks.
 
 Pushing source, building a ZIP, uploading a draft, and passing automated checks
 do not by themselves complete directory publication. Identity verification,
-published policy, owner attestations, portal scans, review approval, publication,
+ owner attestations, portal scans, review approval, publication,
 and client smoke tests remain external steps.
 
 ## Official references checked on 2026-10-07

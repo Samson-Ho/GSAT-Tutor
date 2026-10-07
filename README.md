@@ -92,7 +92,7 @@ python3 scripts/build_openai_plugin.py
 無法讀取原題圖像或完整評分原則時，請提供相關片段，評分會清楚標示估計。
 
 隱私與支援：[PRIVACY.md](PRIVACY.md)、[SUPPORT.md](SUPPORT.md)。
-維護者須先公開隱私政策並確認可存取，再把實際 HTTPS URL 填入 listing。
+隱私政策已公開於 GitHub，經確認可存取後，其 HTTPS URL 已填入 listing；送審前請再次檢查。
 送審、身分驗證、政策聲明、審核與發布均由維護者在 OpenAI dashboard 完成。
 
 ## 結構

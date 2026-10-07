@@ -103,6 +103,10 @@ class PackagingTests(unittest.TestCase):
         self.assert_rejected("unsupported category")
         self.assert_rejected("@mentions")
 
+    def test_malformed_interface_reports_an_error(self):
+        self.change_manifest(lambda m: m["extensions"]["com.openai"].update(interface=[]))
+        self.assert_rejected("interface must be an object")
+
     def test_credential_url_and_unsafe_icon(self):
         self.change_manifest(lambda m: m["extensions"]["com.openai"]["interface"].update(supportURL="https://user:password@example.com", logo="./../outside.png"))
         self.assert_rejected("supportURL")
