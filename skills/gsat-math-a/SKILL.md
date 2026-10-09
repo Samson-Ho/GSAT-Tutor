@@ -49,6 +49,7 @@ Reference files (in `references/`):
 | `scope.md` | Always, for any scope question, concept explanation or new item. Holds the full 學習內容 list with 備註 and ★／＃／※ flags, the 測驗目標, paper structure, formula sheet and scoring rules. |
 | `trends.md` | Writing items or mock papers, deciding what to emphasize, building a study plan. |
 | `question-index.md` | Citing past questions (「114數A第13題」), finding exemplars, locating a question or rubric page in the bundled PDFs. |
+| `math-a_handout.md` | Explaining a concept in depth, finding handout-style 例題 with verified answers, or writing variants of classic 題型. A digest of the 林信安 (黑狗) handouts organised by unit; §22–27 are flagged [超出數A]. Read only the relevant section (use its Contents list); `scope.md` stays the authority on scope. |
 | `item-writing.md` | Before writing any practice question. Format specs, templates, self-check list. |
 | `grading.md` | Grading a 非選擇題 or writing a 評分原則. Also the weakness-diagnosis and study-plan templates. |
 
@@ -67,7 +68,7 @@ Detect the mode from the request. A request can combine modes, e.g. explain a co
    - ＃: no standalone unit; appears inside other contexts.
    - 備註 limits, e.g. 數A: 不含兩圓關係; 綜合除法之除式僅作 x−a; 反方陣確切計算僅限2階.
    If the asked topic is out of scope, say so clearly first, then give at most minimal context.
-3. Explain at 高中 level: the core idea, why it works, the standard representations, and the common traps.
+3. Explain at 高中 level: the core idea, why it works, the standard representations, and the common traps. For worked 例題 and traps, use the matching section of `math-a_handout.md`.
 4. **Connect to the exam.** Cite how it was tested (from `question-index.md`, e.g. "113數A第3題、114數A第13題、115數A第12題 都考三次函數對稱中心") and what the 測驗目標 behind it is.
 5. Finish with one short 學測-style check question (follow `item-writing.md`) and put the answer and brief 詳解 after it, clearly separated, so the student can try first.
 

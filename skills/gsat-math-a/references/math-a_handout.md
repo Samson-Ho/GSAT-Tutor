@@ -1,6 +1,6 @@
 # 數A Handout Digest — 黑狗 (林信安老師編寫) handout corpus
 
-Source: `files/數A/黑狗_handout/` — 163 PDFs (162 unique; `資優班/三上/第59單元數列極限(1).pdf` duplicates `第59單元數列極限.pdf`), ~3,300 pages, three series by 林信安老師:
+Source: `files/數A/黑狗_handout/` — 163 PDFs (162 unique; 資優班/三上 第59單元數列極限(1) duplicates 第59單元數列極限), ~3,300 pages, three series by 林信安老師:
 
 | Series | Folder | Content |
 |---|---|---|
@@ -1137,7 +1137,7 @@ Part C — handout content beyond 學測數A **[超出數A]**
   - 例: equilateral $\frac{\sqrt3}4a^2$; AC=10, BC=8, C=135° → $20\sqrt2$; diagonals 12 and 5 with $\theta_1=2\theta_2$ (so 60°) → $15\sqrt3$; AC=5, AB=8, $\cos A=-\frac45$ → 12.
   - Squares on the legs of a 3-4-5 triangle: $\cos\angle DCE=-\frac35$, area 6.
 - **正弦定理** $\frac a{\sin A}=\frac b{\sin B}=\frac c{\sin C}=2R$. Proof: divide the area formula by $abc$; inscribed angle on the diameter BD (cases acute/right/obtuse; $\sin(180^\circ-A)=\sin A$). Uses:
-  - Ratio form: $a:b:c=\sin A:\sin B:\sin C$.
+  - Ratio form: $a:b:c=\sin A : \sin B : \sin C$.
   - Side ↔ angle conversion: $a=2R\sin A$, $\sin A=\frac a{2R}$.
   - Use it for 「一邊二角」 (AAS/ASA).
   - 例:
@@ -1161,7 +1161,7 @@ Part C — handout content beyond 學測數A **[超出數A]**
 - **角的分類**: $A$ is acute/right/obtuse ⇔ $a^2<,=,>b^2+c^2$. The largest angle sits opposite the largest side, so check only that one.
 - **射影定理** $a=b\cos C+c\cos B$ (and cyclic versions).
 - 例:
-  - Ratio $\sin A:\sin B:\sin C=4:5:7$ ⇒ $\cos C=-\frac15$, $\sin C=\frac{2\sqrt6}5$.
+  - Ratio $\sin A : \sin B : \sin C=4:5:7$ ⇒ $\cos C=-\frac15$, $\sin C=\frac{2\sqrt6}5$.
   - AB=3, AC=4: A=60° → $\sqrt{13}$; A=90° → 5; A=138° → 6.54.
   - Sides 13, 8, 7 ⇒ $C=120^\circ$, altitude $\frac{7\sqrt3}2$.
   - $\sqrt2:2:(\sqrt3-1)$ ⇒ $B=135^\circ$.
@@ -3086,7 +3086,7 @@ Part C — handout content beyond 學測數A **[超出數A]**
   - Unit circle stretched ×3 horizontally and ×2 vertically ⇒ $\frac{x^2}9+\frac{y^2}4=1$.
   - Rotating 60° about O: A(2,−4) → $(1+2\sqrt3,\ \sqrt3-2)$; line $x-\sqrt3y=2$ → x=1; circle $(x-1)^2+(y+\sqrt3)^2=4$ → $(x-2)^2+y^2=4$.
   - Circle reflected in y=2x ⇒ $(x-\frac15)^2+(y-\frac75)^2=1$.
-  - $S:\ x^2+2xy+y^2+3\sqrt2x+\sqrt2y+6=0$ rotated 45° clockwise ⇒ $y=x^2+2x+3$, a parabola with axis x=−1. So S is a parabola with axis $x+y+\sqrt2=0$.
+  - $S$: $x^2+2xy+y^2+3\sqrt2x+\sqrt2y+6=0$ rotated 45° clockwise ⇒ $y=x^2+2x+3$, a parabola with axis x=−1. So S is a parabola with axis $x+y+\sqrt2=0$.
 - **Invariant directions** (enrichment): $A=\begin{bmatrix}2&3\\5&4\end{bmatrix}$.
   - $\overrightarrow{OQ}=s\overrightarrow{OP}$ ⇒ s=7 or −1.
   - |OQ|=|OP| ⇒ $(x+y)(7x+6y)=0$.
@@ -3725,7 +3725,7 @@ These sections record what the 99課綱 數甲 handouts and the 資優班 units 
 - In 數A, the infinite geometric series is not tested; only finite 等比級數 (§8) is.
 - The function vocabulary (定義域, 值域, 合成, Gauss [x], piecewise tax/fare functions) is background for §7/§15.
 
-**Sources**: 99數甲下 1-1數列與極限, 1-2函數的概念, 1-3函數的極限; 資優 第6單元極限與無窮級數, 第55單元函數的極限, 第59單元數列極限 (the folder also contains an identical duplicate file 第59單元數列極限(1).pdf).
+**Sources**: 99數甲下 1-1數列與極限, 1-2函數的概念, 1-3函數的極限; 資優 第6單元極限與無窮級數, 第55單元函數的極限, 第59單元數列極限 (the folder also contains an identical duplicate file 第59單元數列極限(1)).
 
 ### 25.1 函數概念 (99數甲下1-2)
 - **Function**: each x in the 定義域 maps to exactly one y. Representations are tables, graphs, formulas and words.

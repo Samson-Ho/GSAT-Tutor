@@ -112,7 +112,7 @@ GSAT-Tutor/
 ├── skills/
 │   ├── gsat-math-a/            # 數A
 │   │   ├── SKILL.md
-│   │   ├── references/         # scope / trends / question-index / item-writing / grading
+│   │   ├── references/         # scope / trends / question-index / item-writing / grading / math-a_handout
 │   │   └── assets/papers/      # 大考中心官方 PDF（考試說明、參考試卷、試辦、111–115 試題＋答案＋評分原則）
 │   ├── gsat-science/           # 自然（同上結構）
 │   ├── gsat-english/           # 英文（另含 references/vocabulary.md 參考詞彙表全文、scripts/vocab_level.py 詞彙級數檢查）
