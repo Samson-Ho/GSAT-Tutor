@@ -38,9 +38,8 @@ client availability still apply.
   [SUPPORT.md](../SUPPORT.md) points to GitHub Issues. Neither file claims
   control over the host's data retention.
 
-Version remains **1.2.0** for this additive packaging change: this is the first
-portable public-submission package, preserving the existing release identity
-and subject content. Future published package updates need a new version in
+Version **1.2.0** was the first portable public-submission package. Version
+**1.2.1** adds the 數A handout digest (`skills/gsat-math-a/references/math-a_handout.md`). Future published package updates need a new version in
 both manifests; validation rejects drift.
 
 ## Validate and build locally
@@ -66,7 +65,7 @@ python3 scripts/build_openai_plugin.py
 Run from the repository root. The build output is:
 
 ```text
-dist/gsat-tutor-openai-1.2.0.zip
+dist/gsat-tutor-openai-1.2.1.zip
 └── gsat-tutor/
     ├── plugin.json
     ├── assets/icon.png

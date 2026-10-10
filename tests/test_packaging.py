@@ -56,7 +56,7 @@ class PackagingTests(unittest.TestCase):
         self.assert_rejected("Additional properties")
 
     def test_version_drift_and_invalid_semver(self):
-        self.change_manifest(lambda m: m.update(version="1.2.1"))
+        self.change_manifest(lambda m: m.update(version="1.2.2"))
         self.assert_rejected("metadata mismatch: version")
         self.change_manifest(lambda m: m.update(version="01.2.0"))
         self.assert_rejected("invalid semantic version")

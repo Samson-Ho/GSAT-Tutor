@@ -84,7 +84,7 @@ python3 -m unittest discover -s tests -v
 python3 scripts/build_openai_plugin.py
 ```
 
-產物：`dist/gsat-tutor-openai-1.2.0.zip`（不提交到 Git）。
+產物：`dist/gsat-tutor-openai-1.2.1.zip`（不提交到 Git）。
 根目錄 `plugin.json` 為 OpenAI 可攜式入口；OpenAI metadata 放在
 `extensions.com.openai`。不需要新增 `.codex-plugin/plugin.json` 或另一份 marketplace。
 五科技能共用，核心家教不需要本機 shell、Python、MCP、OAuth 或後端；

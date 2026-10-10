@@ -1,7 +1,7 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "gsat-tutor",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "學測（GSAT）家教：依大考中心考試說明與 111–115 學測趨勢，提供數A、自然、英文、國綜、國寫的觀念講解、模擬出題、非選批改與弱點診斷。Tutors Taiwan's GSAT (數A, 自然, 英文, 國綜, 國寫) anchored to the official CEEC exam guidelines.",
   "author": {
     "name": "Samson Ho",
