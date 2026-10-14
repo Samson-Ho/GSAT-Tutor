@@ -19,6 +19,7 @@ Follow this exactly when generating 學測英文 practice items. Aim for an item
 - One sentence and four single-word options of the **same part of speech and form**. Distractors at similar levels.
 - Key mostly L3–L5. A collocation or cause–effect clue must be in the sentence, so the key is the only option that fits both meaning and collocation.
 - Mix in -ly adverbs, derived adjectives and nouns, and occasionally a common word in a secondary sense (stand the test of time; the bus is due).
+- Calibrate key levels, distractors and difficulty with `past-vocab-items.md` §3–§4 (111–115 答對率 data, frame-based difficulty, plain-word trap).
 
 ## 3. 綜合測驗 (1分 each, 2 × 5 blanks)
 

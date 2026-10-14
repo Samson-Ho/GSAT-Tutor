@@ -44,6 +44,7 @@ Reference files (in `references/`):
 | `trends.md` | Writing items or mock papers, choosing topics and item types, building a study plan. |
 | `question-index.md` | Citing past questions (「114英文第40題」), keys, translation and essay prompts, PDF page locations. |
 | `item-writing.md` | Before writing any practice item. Formats and self-check. |
+| `past-vocab-items.md` | Writing or explaining 詞彙題; teaching collocations, secondary senses and look-alike words; setting vocabulary targets in a study plan. Data from 843 past 詞彙題 (83–115學測, 81–110指考) with official 答對率. |
 | `grading.md` | Grading an essay, translation or 混合題 answer, or writing a rubric. Also diagnosis and plan templates. |
 
 Optional local helper: `scripts/vocab_level.py` requires only Python 3 standard-library modules. With shell access, run `python3 scripts/vocab_level.py word1 word2` from this skill's directory, or use the host-resolved path to that script. Passage profiling accepts `--text file.txt` or `--text -` for stdin. Without code execution, search `references/vocabulary.md` directly and check base forms and listed alternatives. The script maps inflections heuristically; confirm doubtful cases in the reference. Never claim an exhaustive automated passage check unless it was actually run.

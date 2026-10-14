@@ -39,7 +39,7 @@ client availability still apply.
   control over the host's data retention.
 
 Version **1.2.0** was the first portable public-submission package. Version
-**1.2.1** adds the 數A handout digest (`skills/gsat-math-a/references/math-a_handout.md`). Future published package updates need a new version in
+**1.2.1** adds the 數A handout digest (`skills/gsat-math-a/references/math-a_handout.md`). Version **1.3.0** adds the 英文 past 詞彙題 bank analysis (`skills/gsat-english/references/past-vocab-items.md`, data from the CC BY-NC 4.0 JCEE-vocab-questions repo). Future published package updates need a new version in
 both manifests; validation rejects drift.
 
 ## Validate and build locally
@@ -65,7 +65,7 @@ python3 scripts/build_openai_plugin.py
 Run from the repository root. The build output is:
 
 ```text
-dist/gsat-tutor-openai-1.2.1.zip
+dist/gsat-tutor-openai-1.3.0.zip
 └── gsat-tutor/
     ├── plugin.json
     ├── assets/icon.png
